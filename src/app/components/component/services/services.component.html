@@ -1,0 +1,121 @@
+   <app-header></app-header>  
+     
+     <!-- Start Hero -->
+        <section class="relative table w-full py-36 lg:py-44 bg-no-repeat bg-center" style="background-image: url('https://ciklopea.com/wp-content/uploads/2017/02/managed_services.jpg')">
+            <div class="absolute inset-0 bg-black opacity-25"></div>
+            <div class="container">
+                <div class="grid grid-cols-1 pb-8 text-center mt-10">
+                    <h5 class="text-white/50 text-lg font-medium">What We Offer ?</h5>
+                    <h3 class="mt-2 md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">Our Services</h3>
+                </div><!--end grid-->
+            </div><!--end container-->
+            
+            <div class="absolute text-center z-10 bottom-5 right-0 left-0 mx-3">
+                <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
+                   <li class="inline breadcrumb-item uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><a routerLink="">Home</a></li>
+                  
+                    <li class="inline breadcrumb-item uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Services</li>
+                </ul>
+            </div>
+        </section><!--end section-->
+        <div class="relative">
+            <div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!-- End Hero -->
+
+        <!-- Start Section-->
+        <section class="relative md:py-24 py-16">
+            <div class="container" >
+                <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]" >
+                    <div class="p-6 shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 transition duration-500 rounded-2xl mt-6 text-center" *ngFor="let service of listeBienfait">
+                        <div class="w-20 h-20 bg-indigo-600/5 text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm dark:shadow-gray-800 mx-auto">
+                           <img src="http://localhost:3000/uploads/{{service.image}}" alt="">
+                        </div>
+
+                        <div class="content mt-7">
+                            <h3  class="title h5 text-lg font-medium hover:text-indigo-600">{{service.name}}</h3>
+                            <p class="text-slate-400 mt-3">{{service.description}}</p>
+                            <p class="text-slate-400 mt-3">{{service.etablissement?.name}}</p>
+                            <div class="mt-5">
+                                <a href="page-services.html" class="btn btn-link text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+        
+                </div><!--end grid-->
+            </div><!--end container-->
+
+             <!-- Start -->
+             <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800 md:pb-0 pb-0">
+                <div class="container" style="display: grid;justify-content:center;">
+                    <div class="grid grid-cols-1 pb-8 text-center">
+                        <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Our Professional Team</h3>
+    
+                        <p class="text-slate-400 max-w-xl mx-auto">Start working with Tailwind CSS that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                    </div><!--end grid-->
+    
+                    <div class="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
+                        <div class="lg:col-span-3 md:col-span-6">
+                            <div class="team p-6 rounded-md border border-gray-100 dark:border-gray-700 group bg-white dark:bg-slate-900">
+                                <img src="assets/images/client/sami.jpg" class="h-24 w-24 rounded-full shadow-md dark:shadow-gray-800" alt="">
+    
+                                <div class="content mt-4">
+                                    <a href="#" class="text-lg font-medium hover:text-indigo-600 block">Ronny Jofra</a>
+                                    <span class="text-slate-400 block">C.E.O.</span>
+    
+                                    <p class="text-slate-400 mt-4">If the distribution of letters and 'words' is random</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="lg:col-span-3 md:col-span-6">
+                            <div class="team p-6 rounded-md border border-gray-100 dark:border-gray-700 group bg-white dark:bg-slate-900">
+                                <img src="assets/images/client/firas.jpg" class="h-24 w-24 rounded-full shadow-md dark:shadow-gray-800" alt="">
+    
+                                <div class="content mt-4">
+                                    <a href="#" class="text-lg font-medium hover:text-indigo-600 block">Aliana Rosy</a>
+                                    <span class="text-slate-400 block">HR</span>
+    
+                                    <p class="text-slate-400 mt-4">If the distribution of letters and 'words' is random</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="lg:col-span-3 md:col-span-6">
+                            <div class="team p-6 rounded-md border border-gray-100 dark:border-gray-700 group bg-white dark:bg-slate-900">
+                                <img src="assets/images/client/03.jpg" class="h-24 w-24 rounded-full shadow-md dark:shadow-gray-800" alt="">
+    
+                                <div class="content mt-4">
+                                    <a href="#" class="text-lg font-medium hover:text-indigo-600 block">Sofia Razaq</a>
+                                    <span class="text-slate-400 block">C.O.O.</span>
+    
+                                    <p class="text-slate-400 mt-4">If the distribution of letters and 'words' is random</p>
+                                </div>
+                            </div>
+                        </div>
+   
+                    </div><!--end grid-->
+                </div><!--end container-->
+              <br><br><br><br>
+            </section><!--end section-->
+
+            <div class="container md:mt-24 mt-16">
+                <div class="grid grid-cols-1 text-center">
+                    <h6 class="text-indigo-600 text-sm font-bold mb-2">Available for freelance projects</h6>
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Do you have digital project? <br> Let's talk.</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">Start working with Techwind that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                
+                    <div class="mt-6">
+                        <a routerLink="/contact" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mr-2 mt-2"><i class="uil uil-phone"></i> Contact Us</a>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End Section-->
+<app-footer></app-footer>

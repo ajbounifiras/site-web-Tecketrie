@@ -1,0 +1,279 @@
+
+<app-header></app-header>
+<!-- End Navbar -->
+<a  onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-indigo-600 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+<!-- Start Hero -->
+<section  class="relative table w-full py-44 bg-center bg-no-repeat" style="background-image: url('https://www.pngitem.com/pimgs/m/393-3939002_reserved-sign-reservation-restaurant-reserved-.png')">
+<div class="absolute inset-0 bg-black opacity-25"></div>
+<div class="container">
+    <div class="grid grid-cols-1 pb-8 text-center mt-10">
+        <h3 class="md:text-4xl text-3xl md:leading-normal tracking-wide leading-normal font-medium text-white">Make Your Resrvation</h3>
+    </div><!--end grid-->
+</div><!--end container-->
+
+<div class="absolute text-center z-10 bottom-5 right-0 left-0 mx-3">
+    <ul class="breadcrumb tracking-[0.5px] breadcrumb-light mb-0 inline-block">
+       <li class="inline breadcrumb-item uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white"><a routerLink="">Home</a></li>
+        <li class="inline breadcrumb-item uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">Make Your Resrvation</li>
+    </ul>
+</div>
+</section >
+<!--end section-->
+
+<div class="relative">
+<div class="shape overflow-hidden z-1 text-white dark:text-slate-900">
+    <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+    </svg>
+</div>
+</div>
+<section class="relative md:py-24 py-16">
+<div class="container  md:mt-24 mt-16">
+<div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+    <div class="lg:col-span-7 md:col-span-6">
+        <img src="assets/images/reser.jpg" alt="">
+    </div>
+
+    <div class="lg:col-span-5 md:col-span-6 mt-8 md:mt-0">
+        <div class="lg:ml-5">
+            <div class="bg-white dark:bg-slate-900 rounded-md shadow dark:shadow-gray-800 p-6">
+                <h3 class="mb-6 text-2xl leading-normal font-medium">Make Reservation !</h3>
+
+                <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
+                    <p class="mb-0" id="error-msg"></p>
+                    <div id="simple-msg"></div>
+                    <div class="grid lg:grid-cols-12 lg:gap-6">
+                        <div class="lg:col-span-6 mb-5">
+                            <div class="text-left">
+                                <label class="block mb-6">
+                                    <span class="text-gray-700">Your name</span>
+                                    <input
+                                      name="name"
+                                      [(ngModel)]="reserve.name"
+                                      type="text"
+                                      class="form-input pl-11
+                                        block
+                                        w-full
+                                        mt-1
+                                        border-gray-300
+                                        rounded-md
+                                        shadow-sm
+                                        focus:border-indigo-300
+                                        focus:ring
+                                        focus:ring-indigo-200
+                                        focus:ring-opacity-50
+                                      "
+                                      placeholder="Joe Bloggs"
+                                    />
+                                  </label>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-6 mb-5">
+                            <div class="text-left">
+                                <label class="block mb-6">
+                                    <span class="text-gray-700">Phone</span>
+                                    <input
+                                      name="phone"
+                                      [(ngModel)]="reserve.phone"
+                                      type="text"
+                                      class="form-input pl-11
+                                        block
+                                        w-full
+                                        mt-1
+                                        border-gray-300
+                                        rounded-md
+                                        shadow-sm
+                                        focus:border-indigo-300
+                                        focus:ring
+                                        focus:ring-indigo-200
+                                        focus:ring-opacity-50
+                                      "
+                                      placeholder="Phone"
+                                    />
+                                  </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1">
+                        <div class="mb-5">
+                            <div class="text-left">
+                                <label class="block mb-6">
+                                    <span class="text-gray-700">Date</span>
+                                    <input
+                                      name="Date"
+                                      [(ngModel)]="reserve.Date"
+                                      type="date"
+                                      class="form-input pl-11
+                                        block
+                                        w-full
+                                        mt-1
+                                        border-gray-300
+                                        rounded-md
+                                        shadow-sm
+                                        focus:border-indigo-300
+                                        focus:ring
+                                        focus:ring-indigo-200
+                                        focus:ring-opacity-50
+                                      "
+                                    />
+                                  </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="text-left">
+                                <label class="block mb-6">
+                                    <span class="text-gray-700"
+                                      >Person</span
+                                    >
+                                    <select
+                                      name="person"
+                                      [(ngModel)]="reserve.person"
+                                      class="form-input pl-11
+                                        block
+                                        w-full
+                                        mt-1
+                                        border-gray-300
+                                        rounded-md
+                                        shadow-sm
+                                        focus:border-indigo-300
+                                        focus:ring
+                                        focus:ring-indigo-200
+                                        focus:ring-opacity-50
+                                      "
+                                    >
+                                      <option value="-1">Person</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+
+                                    </select>
+                                  </label>
+                                 
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6 mb-5">
+                            <div class="text-left">
+                                <label class="block mb-6">
+                                    <span class="text-gray-700">Services</span>
+                                    <select
+                                    name="service"
+                                    [(ngModel)]="reserve.bienfait"
+                                    required
+                                    class="form-input pl-11
+                                      block
+                                      w-full
+                                      mt-1
+                                      border-gray-300
+                                      rounded-md
+                                      shadow-sm
+                                      focus:border-indigo-300
+                                      focus:ring
+                                      focus:ring-indigo-200
+                                      focus:ring-opacity-50
+                                    "
+                                  >
+                                    <option *ngFor="let i of listeServices" [value]="i._id">{{i?.name}}</option>
+                                  </select>
+                                  </label>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6 mb-5">
+                          <div class="text-left">
+                              <label class="block mb-6">
+                                  <span class="text-gray-700">Etablissements</span>
+                                  <select
+                                  name="etablissement"
+                                  [(ngModel)]="reserve.etablissement"
+                                  required
+                                  class="form-input pl-11
+                                    block
+                                    w-full
+                                    mt-1
+                                    border-gray-300
+                                    rounded-md
+                                    shadow-sm
+                                    focus:border-indigo-300
+                                    focus:ring
+                                    focus:ring-indigo-200
+                                    focus:ring-opacity-50
+                                  "
+                                >
+                                  <option *ngFor="let u of listeEtablissements" [value]="u._id">{{u?.name}}</option>
+                                </select>
+                                </label>
+                          </div>
+                      </div>
+                      <div class="lg:col-span-6 mb-5">
+                        <div class="text-left">
+                            <label class="block mb-6">
+                                <span class="text-gray-700">Secteurs</span>
+                                <select
+                                name="secteur"
+                                [(ngModel)]="reserve.secteur"
+                                required
+                                class="form-input pl-11
+                                  block
+                                  w-full
+                                  mt-1
+                                  border-gray-300
+                                  rounded-md
+                                  shadow-sm
+                                  focus:border-indigo-300
+                                  focus:ring
+                                  focus:ring-indigo-200
+                                  focus:ring-opacity-50
+                                "
+                              >
+                                <option *ngFor="let s of listeSecteurs" [value]="s._id">{{s?.nom}}</option>
+                              </select>
+                              </label>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 mb-5">
+                      <div class="text-left">
+                          <label class="block mb-6">
+                              <span class="text-gray-700">Villes</span>
+                              <select
+                              name="etat"
+                              [(ngModel)]="reserve.etat"
+                              required
+                              class="form-input pl-11
+                                block
+                                w-full
+                                mt-1
+                                border-gray-300
+                                rounded-md
+                                shadow-sm
+                                focus:border-indigo-300
+                                focus:ring
+                                focus:ring-indigo-200
+                                focus:ring-opacity-50
+                              "
+                            >
+                              <option *ngFor="let e of listeEtat" [value]="e._id">{{e?.nom}}</option>
+                            </select>
+                            </label>
+                      </div>
+                  </div>
+                    </div>
+                  
+                    <button type="submit" id="submit" name="send" class="btn bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md justify-center flex items-center" (click)="ajouter()">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section><!--end container-->
+<!-- End Hero -->
+<div class="container-fluid relative">
+<div class="grid grid-cols-1">
+    <div class="w-full leading-[0] border-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin" style="border:0" class="w-full h-[500px]" allowfullscreen></iframe>
+    </div>
+</div><!--end grid-->
+<app-footer></app-footer>
+
